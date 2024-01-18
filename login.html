@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Add your custom styles here -->
+</head>
+<body>
+
+<div class="container mt-5 col-md-7 ">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="mb-4">User Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" name="Password" required>
+                </div>
+                <div class="submitbtn d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary ">Login</button>
+                </div>
+
+                <br>
+                <div class="link d-flex justify-content-center">
+                    <p>Are you New User  </p>
+                    <a href="register.html">  click here to Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="login.js"></script>
+
+</body>
+</html>

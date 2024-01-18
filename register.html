@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+
+
+
+<div class="container mt-5 col-md-4">
+    <h2>Sign Up</h2>
+    <br>
+    <form id="registrationForm">
+
+
+        <div class="form-group">
+            <label for="userName">User Name:</label>
+            <input type="text" class="form-control" id="userName" name="userName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="number">Number:</label>
+            <input type="text" class="form-control" id="number" name="number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <br>
+        <div class="submitbtn d-flex justify-content-center">
+        <button type="button" class="btn btn-danger" onclick="registerUser()">Register</button>
+        </div>
+        <br>
+        <div class="link d-flex justify-content-center">
+            <p>Are you already registerd   </p>
+            <a href="login.html">  click here to Login</a>
+        </div>
+    </form>
+
+
+    <div id="registrationMessage"></div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="register.js"></script>
+
+</body>
+</html>

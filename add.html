@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Add Product</h2>
+    <form id="addProductForm">
+        <div class="form-group">
+            <label for="itemCode">Item Code:</label>
+            <input type="text" class="form-control" id="itemCode" name="itemCode" required>
+        </div>
+
+        <div class="form-group">
+            <label for="itemName">Item Name:</label>
+            <input type="text" class="form-control" id="itemName" name="itemName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="text" class="form-control" id="price" name="price" required>
+        </div>
+
+        <div class="form-group">
+            <label for="quentity">Quantity:</label>
+            <input type="number" class="form-control" id="quentity" name="quentity" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+
+    <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+        Item added successfully.
+    </div>
+
+</div>
+
+<script src="add.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Order</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Add Order</h2>
+    <form id="addOrderForm">
+        <div class="form-group">
+            <label for="userId">User ID:</label>
+            <input type="text" class="form-control" id="userId" name="userId" required>
+        </div>
+
+        <div class="form-group">
+            <label for="itemCode">Item Code:</label>
+            <input type="text" class="form-control" id="itemCode" name="itemCode" required>
+        </div>
+
+        <div class="form-group">
+            <label for="quentity">Quantity:</label>
+            <input type="number" class="form-control" id="quentity" name="quentity" required>
+        </div>
+
+        <div class="form-group">
+            <label for="total">Total:</label>
+            <input type="text" class="form-control" id="total" name="total" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Order</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Your custom JavaScript file -->
+<script src="addOrder.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Admin Dashboard</title>
+
+  <style>
+    body {
+      background-image: url('https://img.freepik.com/free-photo/sports-shoe-competition-abstract-multi-color-background-generated-by-ai_188544-19600.jpg?t=st=1705487796~exp=1705491396~hmac=5b21d5ea6a32540d1fbf36115976a4520e0eb70b6e53e7529c261d0f6a5ab99d&w=1060');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      margin: 0;
+      color: #fff; /* Set text color to white for better visibility */
+    }
+  </style>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .dashboard {
+      background-color: #ffffff;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #sel-hed {
+      color: #007bff;
+    }
+
+    .card {
+      margin: 10px;
+    }
+
+    .btn-dashboard {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .card-title{
+      color: black;
+    }
+
+    #des{
+      color: black;
+    }
+
+    #product{
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container fw-bold">
+    <h2 class="navbar-brand" >DD Footwear</h2>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br>
+<!--product-->
+
+<div class="container d-flex justify-content-center">
+  <h2>DD Footwear Products</h2>
+</div>
+
+<!--<div class="dash d-flex justify-content-center">
+<div class="container dashboard ">
+  <h2 id="sel-hed">Seller Dashboard</h2>
+<div class="container row d-flex justify-content-center" id="product">
+  <h3>Products</h3>
+</div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">View Products</h5>
+          <p class="card-text" id="des">Manage and view your products.</p>
+          <a href="./view.html" class="btn btn-primary btn-dashboard">View Products</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">View Stock Level</h5>
+          <p class="card-text" id="des">Check the stock levels of your products.</p>
+          <a href="#" class="btn btn-success btn-dashboard">View Stock Level</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Add Order</h5>
+          <p class="card-text" id="des">Place a new order for products.</p>
+          <a href="#" class="btn btn-warning btn-dashboard">Add Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">View Order Status</h5>
+          <p class="card-text" id="des">Track the status of your orders.</p>
+          <a href="#" class="btn btn-info btn-dashboard">View Order Status</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>-->
+
+<br>
+<!---------------------------->
+<div class="container d-flex justify-content-center">
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <a href="view.html" class="btn btn-danger">View Items</a>
+  <a href="add.html" class="btn btn-warning">Add Items</a>
+  <a href="update.html" class="btn btn-success">Update Items</a>
+  <a href="delete.html" class="btn btn-primary">Delete Items</a>
+  <a href="search.html" class="btn btn-info">Search Items</a>
+</div>
+</div>
+
+<!------------------------------->
+
+<br>
+<br>
+
+
+<!--Users-->
+
+
+<div class="container d-flex justify-content-center">
+  <h2>DD Users</h2>
+</div>
+
+
+<br>
+
+<div class="container d-flex justify-content-center">
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <a href="User/viewUsers.html" class="btn btn-primary">View Users List</a>
+    <a href="User/searchUser.html" class="btn btn-success">Search Users</a>
+    <a href="register.html" class="btn btn-warning">Add New User</a>
+    <!--<a href="add.html" class="btn btn-warning">Add Items</a>
+    <a href="update.html" class="btn btn-success">Update Items</a>
+    <a href="delete.html" class="btn btn-primary">Delete Items</a>
+    <a href="search.html" class="btn btn-info">Search Items</a>-->
+  </div>
+</div>
+
+<br>
+<br>
+
+<!--Orders-->
+
+<div class="container d-flex justify-content-center">
+  <h2>DD Orders</h2>
+</div>
+
+<br>
+
+<div class="container d-flex justify-content-center">
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <a href="Order/viewOrder.html" class="btn btn-primary">View Order List</a>
+    <!--<a href="User/searchUser.html" class="btn btn-success">Search Users</a>
+    <a href="register.html" class="btn btn-warning">Add New User</a>-->
+    <!--<a href="add.html" class="btn btn-warning">Add Items</a>
+    <a href="update.html" class="btn btn-success">Update Items</a>
+    <a href="delete.html" class="btn btn-primary">Delete Items</a>
+    <a href="search.html" class="btn btn-info">Search Items</a>-->
+  </div>
+</div>
+
+<br>
+<br>
+<!--Sellers-->
+
+<div class="container d-flex justify-content-center">
+  <h2>3rd Party Sellers</h2>
+</div>
+
+<br>
+
+<div class="container d-flex justify-content-center">
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <a href="Sellers/sellerList.html" class="btn btn-warning">View Seller List</a>
+    <!--<a href="User/searchUser.html" class="btn btn-success">Search Users</a>
+    <a href="register.html" class="btn btn-warning">Add New User</a>-->
+    <!--<a href="add.html" class="btn btn-warning">Add Items</a>
+    <a href="update.html" class="btn btn-success">Update Items</a>
+    <a href="delete.html" class="btn btn-primary">Delete Items</a>
+    <a href="search.html" class="btn btn-info">Search Items</a>-->
+  </div>
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

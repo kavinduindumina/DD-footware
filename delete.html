@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Item List</h2>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Item Code</th>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="itemList"></tbody>
+    </table>
+
+    <h2>Delete Item</h2>
+    <div class="form-group">
+        <label for="deleteItemCode">Enter Item Code:</label>
+        <input type="text" class="form-control" id="deleteItemCode" required>
+    </div>
+    <button class="btn btn-danger" onclick="deleteItem()">Delete Item</button>
+</div>
+
+<script src="delete.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
