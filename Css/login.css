@@ -1,0 +1,78 @@
+body{
+    background-image: url('https://img.freepik.com/free-photo/modern-blue-sports-shoe-design-close-up-fashionable-generated-by-ai_188544-19682.jpg?size=626&ext=jpg&ga=GA1.1.1964497489.1705394537&semt=sph');
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+
+
+/*nav*/
+#nav{
+    padding: 15px;
+    background: linear-gradient(to right, lightslategray, white, lightslategray);
+}
+
+#nav a{
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+
+#nav a:hover{
+    color: purple;
+}
+
+/*nav*/
+
+
+#loginForm{
+    border: 1px solid green;
+    padding: 50px;
+    background-color: transparent;
+    backdrop-filter: blur(25px);
+    font-weight: bold;
+    border-radius: 35px;
+    margin-top: 25px;
+    color: white;
+}
+
+#title{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+
+/*footer start*/
+
+footer {
+    margin-top: auto;
+    background-color: #f8f9fa;
+    color: #495057;
+    padding: 30px 0;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #007bff;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: darkblue;
+    margin: 0 10px;
+    font-size: 25px;
+}
+
+/*footer end*/

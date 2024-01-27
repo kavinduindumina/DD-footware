@@ -5,15 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Optional: Add your custom styles here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="Css/login.css"> <!-- Optional: Add your custom styles here -->
 </head>
 <body>
+<!--nav start-->
+<nav class="navbar navbar-expand-lg navbar-light " id="nav">
+    <div class="container fw-bold">
+        <a class="navbar-brand" >DD Footwear</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Become a Seller
+                    </a>
+                    <ul class="dropdown-menu bg-light">
+                        <li><a class="dropdown-item" href="Sellers/sellerLogin.html">Seller Login</a></li>
+                        <li><a class="dropdown-item" href="Sellers/sellerRegister.html">Seller Register</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--nav end-->
 
+<!--body start-->
 <div class="container mt-5 col-md-7 ">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <h2 class="mb-4">User Login</h2>
+
             <form id="loginForm">
+                <h2 class="mb-4" id="title">User Login</h2>
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" name="Email" required>
@@ -36,9 +72,26 @@
     </div>
 </div>
 
+<!--body end-->
+
+<footer class="footer">
+    <div class="container">
+        <p class="mb-0">© 2024 DD Footwear Company</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/51babe4472.js" crossorigin="anonymous"></script>
+
 <script src="login.js"></script>
 
 </body>
