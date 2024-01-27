@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,19 +32,220 @@
             <input type="number" class="form-control" id="quentity" name="quentity" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Add Product</button>
+        <div class="form-group">
+            <label for="fileInput">Choose Image:</label>
+            <input type="file" class="form-control-file" id="fileInput">
+        </div>
+
+        <div class="form-group">
+            <label for="idInput">Item Code:</label>
+            <input type="text" class="form-control" id="idInput" placeholder="Item Code">
+        </div>
+
+
+        <button class="btn btn-primary" type="button" onclick="uploadFile()">Upload File</button>
+        <button type="submit" class="btn btn-primary" onclick="addProduct()">Add Product</button>
     </form>
 
-    <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
-        Item added successfully.
+
+
+    <div id="imageContainer" class="mt-4">
+        &lt;!&ndash; Image container with fixed size &ndash;&gt;
+        <img id="uploadedImage" style="max-width: 500px; max-height: 500px;" alt="Uploaded Image">
     </div>
 
 </div>
 
-<script src="add.js"></script>
+
+
+<script type="module" src="add.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.4.1/firebase-storage.js"></script>
+
+
 
 </body>
 </html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Image Upload</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/add-product.css">
+</head>
+<body class="bg-light">
+<div class="container mt-5 col-md-5">
+    <h2 class="mb-4">Add Product</h2>
+
+    <form id="addProductForm">
+        <div class="form-group">
+            <label for="itemCode">Item Code:</label>
+            <input type="text" class="form-control" id="itemCode" name="itemCode" required>
+        </div>
+
+        <div class="form-group">
+            <label for="itemName">Item Name:</label>
+            <input type="text" class="form-control" id="itemName" name="itemName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" class="form-control" id="price" name="price" required>
+        </div>
+
+        <div class="form-group">
+            <label for="quentity">Quantity:</label>
+            <input type="number" class="form-control" id="quentity" name="quentity" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fileInput">Choose Image:</label>
+            <input type="file" class="form-control-file" id="fileInput">
+        </div>
+
+        <div class="form-group">
+            <label for="idInput">Item Code:</label>
+            <input type="text" class="form-control" id="idInput" placeholder="Item Code">
+        </div>
+
+        <button class="btn btn-primary" type="button" onclick="uploadFile()">Upload Image</button>
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-success" onclick="addProduct()">Add Product</button>
+        </div>
+
+
+    </form>
+
+    <div id="imageContainer" class="mt-4">
+        <!-- Image container with fixed size -->
+        <img id="uploadedImage" style="max-width: 500px; max-height: 500px;" alt="Uploaded Image">
+    </div>
+</div>
+
+
+
+
+<!--<div class="mt-5">
+    <h2>Uploaded Images</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Item Code</th>
+            <th>Image</th>
+        </tr>
+        </thead>
+        <tbody id="imageTableBody"></tbody>
+    </table>
+</div>-->
+
+
+<script type="module" src="add.js"></script>
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Include Firebase SDK 7.20.0 -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyCP6ur4fas57KKVeLJou-YUoC3Ho6aCBQs",
+        authDomain: "dd-footware.firebaseapp.com",
+        projectId: "dd-footware",
+        storageBucket: "dd-footware.appspot.com",
+        messagingSenderId: "434977585441",
+        appId: "1:434977585441:web:93a477d7254559e6bee660",
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Get references to Firebase services
+    const storage = firebase.storage();
+    const storageRef = storage.ref();
+
+    // Function to add product details (you can customize this function)
+    function addProduct() {
+        // Add your logic to collect and store product details
+        console.log('Product added successfully!');
+    }
+
+    // Function to upload an image
+    function uploadFile() {
+        const fileInput = document.getElementById('fileInput');
+        const idInput = document.getElementById('idInput');
+
+        const file = fileInput.files[0];
+        const id = idInput.value.trim(); // Trim to remove leading and trailing whitespaces
+
+        if (file && id) {
+            // Create a reference to the storage location with the ID
+            const imageRef = storageRef.child('images/' + id + '/' + file.name);
+
+            // Upload the file
+            imageRef.put(file).then(() => {
+                console.log('Image uploaded successfully!');
+                displayImage(id, file);
+            });
+        } else {
+            console.error('Please select a file and enter an ID');
+        }
+    }
+
+    // Function to display an image
+    function displayImage(id, file) {
+        const imageContainer = document.getElementById('imageContainer');
+
+        // Get the download URL of the uploaded image
+        storageRef.child('images/' + id + '/' + file.name).getDownloadURL().then((url) => {
+            // Create an image element and set its source to the download URL
+            const image = document.createElement('img');
+            image.src = url;
+
+            // Append the image to the container
+            imageContainer.appendChild(image);
+        });
+    }
+
+
+
+/*
+    // Function to display an image
+    function displayImage(id, file) {
+        const imageTableBody = document.getElementById('imageTableBody');
+
+        // Get the download URL of the uploaded image
+        storageRef.child('images/' + id + '/' + file.name).getDownloadURL().then((url) => {
+            // Create a table row
+            const row = imageTableBody.insertRow();
+
+            // Insert cell for Item Code
+            const cell1 = row.insertCell(0);
+            cell1.innerHTML = id;
+
+            // Insert cell for Image
+            const cell2 = row.insertCell(1);
+            // Create an image element and set its source to the download URL
+            const image = document.createElement('img');
+            image.src = url;
+            image.style.maxWidth = '100px'; // Adjust the maximum width as needed
+            cell2.appendChild(image);
+        });
+    }
+*/
+
+</script>
+</body>
+</html>
+
